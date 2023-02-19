@@ -34,7 +34,7 @@ const Hero = () => {
                 textTransform: "capitalize",
               }}
             >
-              Sign Up - It's free
+             {`Sign Up - It's free`}
             </Button>
           </div>
         </Grid>
