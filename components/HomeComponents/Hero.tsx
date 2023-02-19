@@ -21,7 +21,7 @@ const Hero = () => {
       >
         <Grid item>
           <div className="max-w-[390px]">
-            <Typography variant="h5">
+            <Typography variant="h5" sx={{color:"white"}}>
               The #1 project management tool for software development used by
               agile teams
             </Typography>

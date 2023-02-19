@@ -80,7 +80,7 @@ const Register = () => {
                 <Button sx={{width:"100%", padding:"20px"}} type="submit" variant="contained" color="primary">Sign up</Button>
               </Grid>
               <Grid item xs={12} sm={6}>
-                <Typography variant="h6" component="p">
+                <Typography variant="h6" component="p" sx={{fontSize:"18px"}}>
                   Already have account? <Link href="/Login"> Sign in.</Link>
                 </Typography>
               </Grid>
