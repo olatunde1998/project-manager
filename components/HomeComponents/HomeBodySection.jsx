@@ -72,7 +72,7 @@ const HomeBodySection = () => {
             spacing={4}
             sx={{
               justifyContent: "space-around",
-              
+
               paddingBottom: "100px",
             }}
           >
@@ -106,7 +106,7 @@ const HomeBodySection = () => {
                     textTransform: "capitalize",
                   }}
                 >
-                  Get Started It's Free!
+                  {`Get Started It's Free`}
                 </Button>
               </div>
             </Grid>
@@ -117,7 +117,6 @@ const HomeBodySection = () => {
                   width={350}
                   height={350}
                   alt="software team"
-                
                 />
               </div>
             </Grid>
