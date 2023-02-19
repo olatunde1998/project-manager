@@ -4,7 +4,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { makeStyles } from "@material-ui/styles";
-import { maxWidth } from "@mui/system";
 import Link from "next/link";
 
 interface Props {

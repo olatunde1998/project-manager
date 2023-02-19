@@ -4,7 +4,7 @@ import Footer from 'components/Footer'
 
 
 type LayoutProps = {
-  children: string
+  children: any
 }
 
 const Layout = (props: LayoutProps) => {
