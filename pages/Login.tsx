@@ -1,14 +1,13 @@
 import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, Grid, TextField } from "@mui/material";
 import Link from "next/link";
 
 const Login = () => {
   return (
-    <div className="py-[100px]">
+    <div className="py-[100px] px-[20px] bg-white">
       <Card sx={{ maxWidth: 600, marginLeft: "auto", marginRight: "auto" }}>
         <CardActionArea>
           <Typography
@@ -16,13 +15,13 @@ const Login = () => {
             sx={{
               backgroundColor: "#00113d",
               color: "white",
-              fontSize: "24px",
+              fontSize: "20px",
               textAlign: "center",
               fontWeight: "700",
               padding: "20px",
             }}
           >
-            Login into the Project Manager
+            Login to Project Manager
           </Typography>
           <Typography
             component="p"

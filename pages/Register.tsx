@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Register = () => {
   return (
-    <div className="py-[100px]">
+    <div className="py-[100px] px-[20px] bg-white">
       <Card sx={{ maxWidth: 600, marginLeft: "auto", marginRight: "auto"}}>
         <CardActionArea>
           <Typography
@@ -16,13 +16,13 @@ const Register = () => {
             sx={{
               backgroundColor: "#00113d",
               color: "white",
-              fontSize: "24px",
+              fontSize: "20px",
               textAlign: "center",
               fontWeight: "700",
               padding: "20px",
             }}
           >
-            Login into the Project Manager
+            Sign up for Project Manager
           </Typography>
           <Typography
             component="p"
