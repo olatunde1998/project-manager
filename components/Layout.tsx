@@ -2,11 +2,16 @@ import React from 'react'
 import NavBar from 'components/NavBar'
 import Footer from 'components/Footer'
 
-const Layout = ({children}) => {
+
+type LayoutProps = {
+  children: string
+}
+
+const Layout = (props: LayoutProps) => {
   return (
     <div>
         <NavBar/>
-        {children}
+        {props.children}
         <Footer/>
     </div>
   )
