@@ -34,14 +34,14 @@ function NavBar(props: Props) {
       className={classes.navBg}
       color="primary"
       sx={{
-        border: "2px solid green",
+        // border: "2px solid green",
         maxWidth: "1440px",
         marginLeft: "auto",
         marginRight: "auto",
       }}
     >
       <Toolbar>
-        <Link href="/" style={{ flexGrow: 1, display: { sm: "block" } }}>
+        <Link href="/" style={{ flexGrow: 1 }}>
           <Typography variant="h6" component="div">
             Manager
           </Typography>
