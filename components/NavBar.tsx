@@ -4,7 +4,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { makeStyles } from "@material-ui/styles";
-
+import { maxWidth } from "@mui/system";
+import Link from "next/link";
 
 interface Props {
   /**
@@ -17,39 +18,46 @@ interface Props {
 const navItems = ["Login", "Register"];
 
 const useStyles = makeStyles({
-  navBg:{
-    backgroundColor:"#00113d",
-  }
-})
+  navBg: {
+    backgroundColor: "#00113d",
+    padding: "5px",
+  },
+});
 
 function NavBar(props: Props) {
-const classes = useStyles()
+  const classes = useStyles();
 
   return (
-    <Box sx={{ display: "flex" }} >
-      <AppBar component="nav" className={classes.navBg} color="primary">
-        <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { sm: "block" } }}
-          >
-            MUI
+    // <div className="border-2 border-red-800">
+    <AppBar
+      component="nav"
+      className={classes.navBg}
+      color="primary"
+      sx={{
+        border: "2px solid green",
+        maxWidth: "1440px",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    >
+      <Toolbar>
+        <Link href="/" style={{ flexGrow: 1, display: { sm: "block" } }}>
+          <Typography variant="h6" component="div">
+            Manager
           </Typography>
-          <Box>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      {/* <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-        <Typography></Typography>
-      </Box> */}
-    </Box>
+        </Link>
+        <Box>
+          <Link href="/Login">
+            {" "}
+            <Button sx={{ color: "#fff" }}>Login</Button>
+          </Link>
+          <Link href="/Register">
+            <Button sx={{ color: "#fff" }}>Register</Button>
+          </Link>
+        </Box>
+      </Toolbar>
+    </AppBar>
+    // </div>
   );
 }
 export default NavBar;
