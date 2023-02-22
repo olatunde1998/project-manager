@@ -1,4 +1,3 @@
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -27,12 +26,12 @@ function NavBar(props: Props) {
   const classes = useStyles();
 
   return (
-    // <div className="border-2 border-red-800">
-    <AppBar
-      component="nav"
+    <div className="bg-[#00113d] justify-center items-center">
+    <div
+      // component="nav"
       className={classes.navBg}
       color="primary"
-      sx={{
+      style={{
         // border: "2px solid green",
         maxWidth: "1440px",
         marginLeft: "auto",
@@ -55,8 +54,8 @@ function NavBar(props: Props) {
           </Link>
         </Box>
       </Toolbar>
-    </AppBar>
-    // </div>
+    </div>
+    </div>
   );
 }
 export default NavBar;

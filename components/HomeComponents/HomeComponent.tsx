@@ -6,7 +6,7 @@ import HomeBodySection from "@/components/HomeComponents/HomeBodySection";
 
 const HomeComponent = () => {
   return (
-    <div className='mt-20'>
+    <div className=''>
         <Hero/>
         <HomeBodySection/>
     </div>
