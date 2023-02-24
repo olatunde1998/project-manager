@@ -3,6 +3,7 @@ import {
   MdLockOutline,
   MdMoreHoriz,
   MdOutline10K,
+  MdOutlineAdd,
   MdOutlineInsertChartOutlined,
 } from "react-icons/md";
 import View from "components/projectComponents/View";
@@ -16,7 +17,7 @@ const Filter = () => {
       <Grid container>
         <Grid
           item
-          className="p-2 ml-2 border-[1px] border-gray-200 flex items-center"
+          className="p-2 ml-2 border-2 border-[#30363d] bg-[#161b22] flex items-center"
         >
           <div className="mr-2">
             <MdOutlineInsertChartOutlined size={24} />
@@ -27,15 +28,16 @@ const Filter = () => {
           </div>
         </Grid>
         <Grid
-          sx={{ border: "1px solid white", paddingLeft: "4px" }}
+          sx={{ border: "2px solid #30363d", backgroundColor: "#161b22",color:"white", paddingLeft: "4px" }}
           item
           xs={12}
         >
           <div className="flex items-center">
-            <MdFilterList size={24} style={{ color: "rgb(71, 110, 203)" }} />
-            <div className="w-full h-full">
+            <MdFilterList size={24} style={{ color: "white" }} />
+            <div className="w-full h-[10px]">
               <TextField
-                className="w-full"
+                sx={{height:"2px"}}
+                className="w-full text-green-800"
                 type="text"
                 placeholder="Filter by keyword or by field"
               />
@@ -43,26 +45,24 @@ const Filter = () => {
           </div>
         </Grid>
       </Grid>
-      <div className="overflow-auto h-[500px] mt-4 mb-16 border-2 border-red-800">
+      <div className="overflow-x-auto h-[500px] mt-2 mb-16">
         <div
           style={{
-            border: "1px solid yellow",
+            // border: "1px solid yellow",
             display: "flex",
-            overflow:"auto"
-            // width: "100%",
-            // height: "500px",
-            // position:"relative"
+            overflow:"auto",
+            justifyContent:"space-between"
           }}
         >
-          <div className="max-h-[1000px] min-h-[500px]  border-4 border-purple-800 mr-[10px]">
-            <div className="w-[400px]  h-[70px] border-2 border-white">
+          <div className=" h-[450px] bg-[#010409] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
+            <div className="w-[300px]  h-[70px] p-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
                   <Typography variant="body1" component="p">
                     Todo
                   </Typography>
-                  <div className="w-[20px] h-[20px] text-xs font-black ml-2 max-h-[32px] items-center flex text-center rounded-full bg-green-600 justify-center p-[2px]">
+                  <div className="w-[20px] h-[20px] text-xs bg-[#30363d] font-black ml-2 max-h-[32px] items-center flex text-center rounded-full bg-green-600 justify-center p-[2px]">
                     10
                   </div>
                 </div>
@@ -72,9 +72,9 @@ const Filter = () => {
                 {`This item hasn't been started`}
               </Typography>
             </div>
-            <ul>
+            <ul className="overflow-y-auto max-h-[320px]">
               <li>
-                <div className="w-[400px] h-[70px] mt-2 border-2 border-blue-800">
+                <div className="w-[300px] bg-[#161b22] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
@@ -90,46 +90,95 @@ const Filter = () => {
               </li>
               <Item/>
               <Item/>
+              <Item/>
+              <Item/>
+              <Item/>
+              <Item/>
+              <Item/>
+            </ul>            
+          </div>
+
+          <div className="h-[450px] bg-[#010409] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
+            <div className="w-[300px]  h-[70px] p-2">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <div className="w-2 mr-2 rounded-full bg-[#9e6a03] p-2"></div>
+                  <Typography variant="body1" component="p">
+                    In progress
+                  </Typography>
+                  <div className="w-[20px] h-[20px] text-xs bg-[#30363d] font-black ml-2 max-h-[32px] items-center flex text-center rounded-full bg-green-600 justify-center p-[2px]">
+                    4
+                  </div>
+                </div>
+                <MdMoreHoriz size={30} />
+              </div>
+              <Typography variant="body1" component="p">
+                This is actively being worked on
+              </Typography>
+            </div>
+            <ul className="overflow-y-auto max-h-[320px]">
+              <li>
+                <div className="w-[300px] bg-[#161b22] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
+                      <Typography variant="body1" component="p">
+                        Item 1
+                      </Typography>
+                    </div>
+                  </div>
+                  <Typography variant="body1" component="p">
+                    {`This item hasn't been started`}
+                  </Typography>
+                </div>
+              </li>
+              <Item/>
+              <Item/>
+              <Item/>
+              <Item/>
+
+
             </ul>
           </div>
 
-          <div className="border-2 border-purple-800 mr-[10px]">
-            <div className="w-[400px] h-[70px] border-2 border-white">
+<div className="h-[450px] bg-[#010409] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
+            <div className="w-[300px]  h-[70px] p-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
+                  <div className="w-2 mr-2 rounded-full bg-[#8957e5] p-2"></div>
                   <Typography variant="body1" component="p">
-                    Todo
+                    Done
                   </Typography>
-                  <div className="w-[20px] h-[20px] text-xs font-black ml-2 max-h-[32px] items-center flex text-center rounded-full bg-green-600 justify-center p-[2px]">
-                    10
+                  <div className="w-[20px] h-[20px] text-xs bg-[#30363d] font-black ml-2 max-h-[32px] items-center flex text-center rounded-full bg-green-600 justify-center p-[2px]">
+                    1
                   </div>
                 </div>
                 <MdMoreHoriz size={30} />
               </div>
               <Typography variant="body1" component="p">
-                {`This item hasn't been started`}
+                This has been completed
               </Typography>
             </div>
-          </div>
-          <div className="border-2 border-purple-800 mr-[10px]">
-            <div className="w-[400px] h-[70px] border-2 border-white">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
-                  <Typography variant="body1" component="p">
-                    Todo
-                  </Typography>
-                  <div className="w-[20px] h-[20px] text-xs font-black ml-2 max-h-[32px] items-center flex text-center rounded-full bg-green-600 justify-center p-[2px]">
-                    10
+            <ul className="overflow-y-auto max-h-[320px]">
+              <li>
+                <div className="w-[300px] bg-[#161b22] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
+                      <Typography variant="body1" component="p">
+                        Item 1
+                      </Typography>
+                    </div>
                   </div>
+                  <Typography variant="body1" component="p">
+                    {`This item hasn't been started`}
+                  </Typography>
                 </div>
-                <MdMoreHoriz size={30} />
-              </div>
-              <Typography variant="body1" component="p">
-                {`This item hasn't been started`}
-              </Typography>
-            </div>
+              </li>
+              <Item/>
+              <Item/>
+
+            </ul>
           </div>
         </div>
       </div>
