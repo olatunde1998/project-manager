@@ -26,14 +26,14 @@ function NavBar(props: Props) {
   const classes = useStyles();
 
   return (
-    <div className="bg-[#00113d] justify-center items-center">
+    <div className="fixed w-[100%] bg-[#00113d] justify-center items-center">
     <div
       // component="nav"
       className={classes.navBg}
       color="primary"
       style={{
         // border: "2px solid green",
-        maxWidth: "1440px",
+        maxWidth: "1300px",
         marginLeft: "auto",
         marginRight: "auto",
       }}

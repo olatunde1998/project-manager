@@ -24,26 +24,26 @@ function SimpleDialog(props: SimpleDialogProps) {
   return (
     <Dialog
       sx={{
-        marginTop:"24px",
+        // marginTop:"24px",
         marginLeft: "50px",
         padding: "0px",
         maxWidth: "320px",
-        maxHeight: "450px",
+        maxHeight: "410px",
       }}
       onClose={handleClose}
       open={open}
     >
       <DialogTitle>Layout</DialogTitle>
-      <Grid sx={{alignItems:"center",border:"2px solid red"}} container spacing={2}>
+      <Grid sx={{alignItems:"center"}} container spacing={2}>
         <Grid sx={{marginLeft:"10px",marginRight:"5px"}} item xs={3}>
           {/* <FaBorderNone size={80} /> */}
-          <FaColumns size={70} />
+          <FaColumns size={40} />
         </Grid>
         <Grid item xs={3}>
-          <MdOutlineInsertChartOutlined size={80} />
+          <MdOutlineInsertChartOutlined size={50} />
         </Grid>
         <Grid sx={{marginLeft:"10px"}}  item xs={3}>
-          <FaBorderAll size={70} />
+          <FaBorderAll size={40} />
         </Grid>
       </Grid>
     </Dialog>
@@ -66,7 +66,7 @@ export default function View() {
   return (
     <div className="">
       <div
-        style={{ Width:"10px", border: "1px solid red" }}
+        style={{ width:"20px" }}
         // variant="outlined"
         onClick={handleClickOpen}
       >
