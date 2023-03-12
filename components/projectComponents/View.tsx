@@ -4,7 +4,7 @@ import Dialog from "@mui/material/Dialog";
 import { FaAngleDown, FaBorderAll, FaBorderNone, FaColumns } from "react-icons/fa";
 import { useState } from "react";
 import { MdOutlineInsertChartOutlined } from "react-icons/md";
-import { Grid } from "@mui/material";
+import { Grid, Input } from "@mui/material";
 
 export interface SimpleDialogProps {
   open: boolean;

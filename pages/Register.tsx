@@ -1,10 +1,23 @@
 import Head from "next/head";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-// import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, Grid, TextField } from "@mui/material";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+
+const registerVariants ={
+  hidden:{
+    opacity:0,
+    y:'100vw'
+  },
+  visible:{
+    opacity:1,
+    y:0,
+    transition:{delay:3, duration:3, type:'spring'}
+  }
+}
 
 const Register = () => {
   return (
@@ -15,7 +28,7 @@ const Register = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="py-[100px] px-[20px] bg-white">
+      <motion.div variants={registerVariants} initial='hidden'animate='visible' exit='exit' className="py-[100px] px-[20px] bg-white">
         <Card sx={{ maxWidth: 600, marginLeft: "auto", marginRight: "auto" }}>
           <CardActionArea>
             <Typography
@@ -156,7 +169,7 @@ const Register = () => {
             </CardContent>
           </CardActionArea>
         </Card>
-      </div>
+      </motion.div>
     </>
   );
 };

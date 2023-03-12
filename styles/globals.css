@@ -13,7 +13,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(84, 83, 83);
+  background: white;
 }
 
 a {

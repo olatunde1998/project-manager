@@ -11,9 +11,9 @@ const Projects = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="">
-        <div className="max-w-[1440px] mr-auto ml-auto  border-4 border-gray-800">
-          <ProjectHeading />
+      <div className="bg-[#001147] pt-[30px] lg:h-screen">
+        <div className="max-w-[1024px] mr-auto ml-auto">
+          <ProjectHeading/>
           <Filter />
         </div>
       </div>

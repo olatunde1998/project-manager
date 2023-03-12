@@ -1,12 +1,75 @@
 import { Button, Grid, Typography } from "@mui/material";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+
+const homebodyVariants ={
+  hidden:{
+    opacity:0,
+    y:'100vw'
+  },
+  visible:{
+    opacity:1,
+    y:0,
+    transition:{type:'spring', delay:2, duration: 5}
+  },
+  exit:{
+    x:'-100vw',
+    transition:{ease: "easeInOut"}
+  }
+}
+const softwareVariants = {
+  hidden: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      delay: 4,
+      duration: 5,
+    },
+  },
+};
+
+const planworkVariants = {
+  hidden: {
+    opacity:0,
+    x: "-100vw",
+  },
+  visible: {
+    opacity:1,
+    x:0,
+    transition: {
+      type: "spring",
+      delay: 4.5,
+      duration: 10,
+    },
+  },
+};
+const planningVariants ={
+  hidden:{
+    opacity: 0,
+    x: '100vw'
+  },
+  visible:{
+    opacity:1,
+    x:0,
+    transition:{type:'spring', delay: 5, duration: 50}
+  }
+}
 
 const HomeBodySection = () => {
   return (
-    <div className="bg-white">
-      <div className="bg-white text-[#212529] px-12 xl:max-w-[1440px] flex flex-col mr-[auto] ml-[auto]">
-        <div className="text-center my-8 py-20">
+
+      <motion.div variants={homebodyVariants} initial='hidden' animate='visible' className="bg-white text-[#212529] px-12 xl:max-w-[1440px] flex flex-col mr-[auto] ml-[auto]">
+        <motion.div
+          variants={softwareVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-center my-8 py-20"
+        >
           <Typography
             variant="h5"
             sx={{ fontWeight: "600", fontSize: "32px", marginBottom: "10px" }}
@@ -26,8 +89,13 @@ const HomeBodySection = () => {
             Manager Software is built for every member of your team to plan,
             track and release great software
           </Typography>
-        </div>
-        <div className="max-w-[1024px] ml-[auto] mr-[auto]">
+        </motion.div>
+        <motion.div
+          variants={planworkVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-[1024px] ml-[auto] mr-[auto]"
+        >
           <Grid
             container
             spacing={4}
@@ -65,8 +133,8 @@ const HomeBodySection = () => {
               </div>
             </Grid>
           </Grid>
-        </div>
-        <div className="max-w-[1024px] ml-[auto] mr-[auto]">
+        </motion.div>
+        <motion.div variants={planningVariants} initial='hidden' animate='visible' className="max-w-[1024px] ml-[auto] mr-[auto]">
           <Grid
             container
             spacing={4}
@@ -121,9 +189,9 @@ const HomeBodySection = () => {
               </div>
             </Grid>
           </Grid>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+ 
   );
 };
 

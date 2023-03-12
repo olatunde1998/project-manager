@@ -1,23 +1,27 @@
 import {
   MdFilterList,
-  MdLockOutline,
   MdMoreHoriz,
-  MdOutline10K,
   MdOutlineAdd,
   MdOutlineInsertChartOutlined,
 } from "react-icons/md";
 import View from "components/projectComponents/View";
-import { Grid, TextField, Typography } from "@mui/material";
-import { FilterList } from "@mui/icons-material";
+import { Grid, Input, TextField, Typography } from "@mui/material";
 import Item from "./Item";
 
 const Filter = () => {
+  const draggingOver = () =>{
+    console.log("Dragging over now")
+  }
+  const dragDropped = () =>{
+    console.log("You have dropped")
+
+  }
   return (
-    <div>
+    <div className="h-full">
       <Grid container>
         <Grid
           item
-          className="p-2 ml-2 border-2 border-[#30363d] bg-[#161b22] flex items-center"
+          className="p-2 ml-2 border-2 border-[#30363d] bg-[#243260] flex items-center"
         >
           <div className="mr-2">
             <MdOutlineInsertChartOutlined size={24} />
@@ -28,15 +32,21 @@ const Filter = () => {
           </div>
         </Grid>
         <Grid
-          sx={{ border: "2px solid #30363d", backgroundColor: "#161b22",color:"white", paddingLeft: "4px" }}
+          sx={{
+            border: "2px solid #30363d",
+            backgroundColor: "#243260",
+            color: "white",
+            paddingLeft: "4px",
+          }}
           item
           xs={12}
         >
           <div className="flex items-center">
             <MdFilterList size={24} style={{ color: "white" }} />
-            <div className="w-full h-[10px]">
+            <div className="w-full">
               <TextField
-                sx={{height:"2px"}}
+                // sx={{height:"2px"}}
+                size="small"
                 className="w-full text-green-800"
                 type="text"
                 placeholder="Filter by keyword or by field"
@@ -50,11 +60,11 @@ const Filter = () => {
           style={{
             // border: "1px solid yellow",
             display: "flex",
-            overflow:"auto",
-            justifyContent:"space-between"
+            overflow: "auto",
+            justifyContent: "space-between",
           }}
         >
-          <div className=" h-[450px] bg-[#010409] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
+          <div className=" h-[450px] bg-[#001147] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
             <div className="w-[300px]  h-[70px] p-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
@@ -73,8 +83,8 @@ const Filter = () => {
               </Typography>
             </div>
             <ul className="overflow-y-auto max-h-[320px]">
-              <li>
-                <div className="w-[300px] bg-[#161b22] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
+              <li draggable>
+                <div className="w-[300px] bg-[#243260] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
@@ -88,17 +98,29 @@ const Filter = () => {
                   </Typography>
                 </div>
               </li>
-              <Item/>
-              <Item/>
-              <Item/>
-              <Item/>
-              <Item/>
-              <Item/>
-              <Item/>
-            </ul>            
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+            </ul>
+            <div className="flex items-center mt-2">
+              <MdOutlineAdd size={24} />
+              <TextField
+                size="small"
+                label="Add items"
+                className="text-red-800"
+                sx={{color:"#ffff",backgroundColor:"#243260"}}
+                type="text"
+                fullWidth
+                placeholder="Add items"
+              />
+            </div>
           </div>
-
-          <div className="h-[450px] bg-[#010409] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
+{/* in progress container */}
+          <div droppable onDragOver={(e)=>draggingOver(e)} onDrop={(e)=>dragDropped(e)} className="h-[450px] bg-[#001147] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
             <div className="w-[300px]  h-[70px] p-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
@@ -118,7 +140,7 @@ const Filter = () => {
             </div>
             <ul className="overflow-y-auto max-h-[320px]">
               <li>
-                <div className="w-[300px] bg-[#161b22] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
+                <div className="w-[300px] bg-[#243260] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
@@ -132,16 +154,26 @@ const Filter = () => {
                   </Typography>
                 </div>
               </li>
-              <Item/>
-              <Item/>
-              <Item/>
-              <Item/>
-
-
+              <Item />
+              <Item />
+              <Item />
+              <Item />
             </ul>
+            <div className="flex items-center mt-2">
+              <MdOutlineAdd size={24} />
+              <TextField
+                size="small"
+                label="Add items"
+                className="text-red-800"
+                sx={{color:"#ffff",backgroundColor:"#243260"}}
+                type="text"
+                fullWidth
+                placeholder="Add items"
+              />
+            </div>
           </div>
 
-<div className="h-[450px] bg-[#010409] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
+          <div className="h-[450px] bg-[#001147] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
             <div className="w-[300px]  h-[70px] p-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
@@ -161,7 +193,7 @@ const Filter = () => {
             </div>
             <ul className="overflow-y-auto max-h-[320px]">
               <li>
-                <div className="w-[300px] bg-[#161b22] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
+                <div className="w-[300px] bg-[#243260] h-[70px] mt-2 border-2 border-[#30363d] rounded-lg p-1">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <div className="w-2 mr-2 rounded-full bg-green-600 p-2"></div>
@@ -175,10 +207,21 @@ const Filter = () => {
                   </Typography>
                 </div>
               </li>
-              <Item/>
-              <Item/>
-
+              <Item />
+              <Item />
             </ul>
+            <div className="flex items-center mt-2">
+              <MdOutlineAdd size={24} />
+              <TextField
+                size="small"
+                label="Add items"
+                className="text-red-800"
+                sx={{color:"#ffff",backgroundColor:"#243260"}}
+                type="text"
+                fullWidth
+                placeholder="Add items"
+              />
+            </div>
           </div>
         </div>
       </div>

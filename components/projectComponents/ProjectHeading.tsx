@@ -17,7 +17,7 @@ const ProjectHeading = () => {
         </div>
       </Grid>
       <Grid item xs={6} sx={{ display: "flex", justifyContent: "end" }}>
-        <div className="p-2 bg-gray-600 flex justify-end mr-4">
+        <div className="p-2 bg-[#243260] flex justify-end mr-4">
           <div className="mx-2">
             <MdOutlineInsertChartOutlined />
           </div>
