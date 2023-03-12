@@ -5,7 +5,7 @@ import {
   MdOutlineInsertChartOutlined,
 } from "react-icons/md";
 import View from "components/projectComponents/View";
-import { Grid, Input, TextField, Typography } from "@mui/material";
+import { Grid,TextField, Typography } from "@mui/material";
 import Item from "./Item";
 
 const Filter = () => {
@@ -120,7 +120,7 @@ const Filter = () => {
             </div>
           </div>
 {/* in progress container */}
-          <div droppable onDragOver={(e)=>draggingOver(e)} onDrop={(e)=>dragDropped(e)} className="h-[450px] bg-[#001147] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
+          <div onDragOver={()=>draggingOver()}  className="h-[450px] bg-[#001147] border-2 border-[#30363d] rounded-lg mr-[10px] p-2">
             <div className="w-[300px]  h-[70px] p-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
