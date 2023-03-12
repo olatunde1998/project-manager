@@ -4,7 +4,19 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, Grid, TextField } from "@mui/material";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
+const loginVariants ={
+  hidden:{
+    opacity:0,
+    y:'100vw'
+  },
+  visible:{
+    opacity:1,
+    y:0,
+    transition:{delay:3, duration:3, type:'spring'}
+  }
+}
 const Login = () => {
   return (
     <>
@@ -14,7 +26,7 @@ const Login = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="py-[100px] px-[20px] bg-white">
+      <motion.div variants={loginVariants} initial='hidden'animate='visible' className="py-[100px] px-[20px] bg-white">
         <Card sx={{ maxWidth: 600, marginLeft: "auto", marginRight: "auto" }}>
           <CardActionArea>
             <Typography
@@ -140,7 +152,7 @@ const Login = () => {
             </CardContent>
           </CardActionArea>
         </Card>
-      </div>
+      </motion.div>
     </>
   );
 };
